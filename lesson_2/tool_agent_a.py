@@ -94,7 +94,7 @@ def ask(question: str):
             "tool_call_id": tool_call.id,                 # 对应刚才那个调用
             "content": result,                            # 搜索结果文本
         })
-
+        
         # 第二次发请求：模型基于搜索结果给出最终答案
         resp2 = client.chat.completions.create(
             model="deepseek-chat",
